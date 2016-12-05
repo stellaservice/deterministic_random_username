@@ -6,7 +6,7 @@ A random Heroku-style name generator.
 
 Add this line to your application's Gemfile:
 
-    gem "random_username"
+    gem "deterministic_random_username"
 
 And then execute:
 
@@ -14,15 +14,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install random_username
+    $ gem install deterministic_random_username
 
 ## Usage
 
 ```
+require 'random_username'
 RandomUsername.username
 => "hollowlight"
 => "legitsunrise"
 => "earthyleaf"
+
+RandomUsername.username(random: Random.new(deterministic_value))
+=> "boldsage"
+=> "boldsage"
+=> "boldsage"
 
 RandomUsername.username(:min_length => 6, :max_length => 8)
 => "fitcow"
@@ -34,9 +40,19 @@ RandomUsername.noun
 => "prize"
 => "sage"
 
+RandomUsername.noun(random: Random.new(deterministic_value))
+=> "prize"
+=> "prize"
+=> "prize"
+
 RandomUsername.adjective
 => "heroic"
 => "worthy"
+=> "enigmatic"
+
+RandomUsername.adjective(random: Random.new(deterministic_value))
+=> "enigmatic"
+=> "enigmatic"
 => "enigmatic"
 ```
 
