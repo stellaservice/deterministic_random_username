@@ -2,14 +2,14 @@
 require File.expand_path('../lib/random_username/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = "random_username"
+  gem.name          = "deterministic_random_username"
   gem.version       = RandomUsername::VERSION
   gem.license       = "MIT"
-  gem.authors       = ["Michael Foley"]
+  gem.authors       = ["Michael Foley", "Brian Glusman"]
   gem.email         = ["mike@polleverywhere.com"]
-  gem.description   = %q{Generate random Heroku-style names}
-  gem.summary       = %q{Generate random Heroku-style names}
-  gem.homepage      = "https://github.com/polleverywhere/random_username"
+  gem.description   = %q{Generate random or deterministic Heroku-style names}
+  gem.summary       = %q{Generate random or deterministic Heroku-style names}
+  gem.homepage      = "https://github.com/stellaservice/random_username"
 
   gem.files         = `git ls-files`.split("\n")
   gem.executables   = []
